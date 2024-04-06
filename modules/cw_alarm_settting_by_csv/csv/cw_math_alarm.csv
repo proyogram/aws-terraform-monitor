@@ -1,0 +1,18 @@
+id,name,alarm_name,comparison_operator,evaluation_periods,threshold,alarm_description,expression,label,metric_name_m1,namespace_m1,period_m1,stat_m1,dimensions_m1,metric_name_m2,namespace_m2,period_m2,stat_m2,dimensions_m2
+1,webapp_server01&02,EC2_webapp_server01&02_AverageCPUUtilization,LessThanOrEqualToThreshold,1,10,,(m1+m2)/2,AverageCPUUtilization,CPUUtilization,AWS/EC2,300,Average,"{
+    ""InstanceId"" : ""value01""
+}",CPUUtilization,AWS/EC2,300,Average,"{
+    ""InstanceId"" : ""value02""
+}"
+2,alb01,ALB_alb01_ErrorRate,GreaterThanOrEqualToThreshold,1,10,,m1/m2*100,ErrorRate,HTTPCode_Target_5XX_Count,AWS/ApplicationELB,300,Average,"{
+    ""LoadBalancer"" : ""value01""
+}",RequestCount,AWS/ApplicationELB,300,Average,"{
+    ""LoadBalancer"" : ""value01""
+}"
+3,table01,RDS_table01_ReadCapacityUtilization,GreaterThanOrEqualToThreshold,1,80,,m1/m2*100,ReadCapacityUtilization,ConsumedReadCapacityUnits,AWS/RDS,300,Average,"{
+    ""TableName "" : ""value01"",
+ ""GlobalSecondaryIndexName "" : ""value02""
+}",ProvisionedReadCapacityUnits,AWS/RDS,300,Average,"{
+    ""TableName "" : ""value01"",
+ ""GlobalSecondaryIndexName "" : ""value02""
+}"

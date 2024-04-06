@@ -1,0 +1,27 @@
+id,name,alarm_name,comparison_operator,evaluation_periods,metric_name,namespace,period,statistic,threshold,alarm_description,dimensions
+1,webapp_server01,EC2_webapp_server01_CPUUtilization,GreaterThanOrEqualToThreshold,1,CPUUtilization,AWS/EC2,300,Average,80,,"{
+    ""InstanceId"" : ""value01""
+}"
+2,webapp_server01,EC2_webapp_server01_CPUCreditBalance,LessThanOrEqualToThreshold,1,CPUCreditBalance,AWS/EC2,300,Average,30,,"{
+    ""InstanceId"" : ""value01""
+}"
+3,webapp_server01,EC2_webapp_server01_MemoryUtilization,GreaterThanOrEqualToThreshold,1,MemoryUtilization,AWS/EC2,300,Average,80,,"{
+    ""InstanceId"" : ""value01""
+}"
+4,webapp_server02,EC2_webapp_server02_CPUUtilization,GreaterThanOrEqualToThreshold,1,CPUUtilization,AWS/EC2,300,Average,80,,"{
+    ""InstanceId"" : ""value01""
+}"
+5,webapp_server02,EC2_webapp_server02_CPUCreditBalance,LessThanOrEqualToThreshold,1,CPUCreditBalance,AWS/EC2,300,Average,30,,"{
+    ""InstanceId"" : ""value01""
+}"
+6,webapp_server02,EC2_webapp_server02_MemoryUtilization,GreaterThanOrEqualToThreshold,1,MemoryUtilization,AWS/EC2,300,Average,80,,"{
+    ""InstanceId"" : ""value01""
+}"
+7,alb01,ALB_alb01_UnHealthyHostCount,GreaterThanThreshold,1,UnHealthyHostCount,AWS/ApplicationELB,300,Sum,0,,"{
+    ""LoadBalancer"" : ""value01"",
+ ""TargetGroup"" : ""value02""
+}"
+8,alb02,ALB_alb02_UnHealthyHostCount,GreaterThanThreshold,1,UnHealthyHostCount,AWS/ApplicationELB,300,Sum,0,,"{
+    ""LoadBalancer"" : ""value01"",
+ ""TargetGroup"" : ""value02""
+}"
